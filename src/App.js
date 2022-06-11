@@ -11,8 +11,8 @@ function App() {
       <Navbar></Navbar>
       <Header></Header>
       <Routes>
-      <Route path="/" element={<Navigate to="/topstories" />} />
-      <Route path='/:page' element={<News></News>}/>
+        <Route path="/" element={<Navigate to="/topstories" />} />
+        <Route path='/:page' element={<News></News>}/>
       </Routes>
     </div>
   );
