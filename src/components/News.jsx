@@ -25,7 +25,11 @@ const News = () => {
         console.log(res.data)
     }
  
-
+    const pageChange = (e, page)=>{
+        setNewPage(page)
+        getNews()
+        window.scrollTo(0, 0)
+    }
   return (
     <div style={{display:"flex", flexDirection:"column", alignItems:"center", justifyContent:'center', gap:"30px", marginBottom:"30px"}}>
         <SimpleBackdrop open = {loading}></SimpleBackdrop>
@@ -36,7 +40,7 @@ const News = () => {
                 )
             })}
         </div>
-        <Pagination onChange={(page)=>setNewPage(page)} variant="outlined" shape="rounded" count={pages} />
+        <Pagination onChange={pageChange} variant="outlined" shape="rounded" count={pages} />
     </div>
 
   )
