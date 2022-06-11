@@ -16,7 +16,7 @@ const Individual = ({title, type, url, by}) => {
     }
   return (
     
-        <div className='card' style={{width:"30%", height:"450px", minWidth:"250px", overflow:"hidden"}}>
+        <div className='card' style={{width:"30%", height:"450px", minWidth:"250px", maxWidth:"450px", overflow:"hidden"}}>
             <img style={{width:"100%", height:"60%"}} src={metaData.image || placeholder} alt="image" />
             <h3>{title}</h3>
         </div>

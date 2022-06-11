@@ -14,7 +14,7 @@ const News = () => {
 
     useEffect(()=>{
         getNews()
-    },[page])
+    },[page, newPage])
 
     const getNews = async()=>{
         setLoading(true)
@@ -27,11 +27,10 @@ const News = () => {
  
     const pageChange = (e, page)=>{
         setNewPage(page)
-        getNews()
         window.scrollTo(0, 0)
     }
   return (
-    <div style={{display:"flex", flexDirection:"column", alignItems:"center", justifyContent:'center', gap:"30px", marginBottom:"30px"}}>
+    <div style={{display:"flex", flexDirection:"column", alignItems:"center", justifyContent:'center', marginBottom:"30px"}}>
         <SimpleBackdrop open = {loading}></SimpleBackdrop>
         <div style={{ display:"flex", flexWrap:"wrap", justifyContent:"center", gap:"20px", alignItems:"center"}}>
             {news.map((el)=>{
