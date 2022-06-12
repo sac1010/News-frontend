@@ -40,16 +40,19 @@
 a{
   text-decoration: none;
   color: inherit;
+  background: linear-gradient(currentColor, currentColor) bottom / 0 .1em no-repeat;
+	transition: 1s background-size;
+  background-position: left bottom;
 }
 
 a:hover{
   color: rgb(255, 82, 82);
+  background-size: 100% .1em;
 }
 
 .active{
   color: red;
-  text-decoration: underline;
-  font-weight: bold;
+  
 }
 .card{
   transition-duration: 0.2s;

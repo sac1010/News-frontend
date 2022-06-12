@@ -1,9 +1,8 @@
-import './App.css';
-import Navbar from './components/Navbar';
-import Header from './components/Header';
-import {Routes, Route, Navigate} from "react-router-dom"
-import News from './components/News';
-
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
+import { Routes, Route, Navigate } from "react-router-dom";
+import News from "./components/News";
 
 function App() {
   return (
@@ -12,7 +11,7 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path="/" element={<Navigate to="/topstories" />} />
-        <Route path='/:page' element={<News></News>}/>
+        <Route path="/:page" element={<News></News>} />
       </Routes>
     </div>
   );
